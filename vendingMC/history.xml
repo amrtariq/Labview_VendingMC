@@ -1,0 +1,41 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:CommandTimeout='30'>
+		<s:AttributeType name='id' rs:number='1' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='date_time' rs:number='2' rs:nullable='true' rs:maydefer='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='65536' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='item' rs:number='3' rs:nullable='true' rs:maydefer='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='65536' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='quantity' rs:number='4' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='price' rs:number='5' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='54' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='paid' rs:number='6' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='54' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='change' rs:number='7' rs:nullable='true' rs:write='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='54' rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='user' rs:number='8' rs:nullable='true' rs:maydefer='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='65536' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='type' rs:number='9' rs:nullable='true' rs:maydefer='true' rs:write='true'>
+			<s:datatype dt:type='string' dt:maxLength='65536' rs:long='true'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row id='1' date_time='2019-05-12 02:34:34' item='Sweets' quantity='10' price='10' paid='100' change='90'
+		 user='admin' type='purchase'/>
+</rs:data>
+</xml>
